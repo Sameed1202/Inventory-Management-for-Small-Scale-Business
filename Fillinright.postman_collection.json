@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "4a9ba184-2aa9-4fef-9e81-1460d5f4f778",
+		"name": "Fillinright",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dabur Honey 500ml\",\r\n    \"price\": \"30\",\r\n    \"quantity\": 10,\r\n    \"barcode\": \"89009611\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}:7001/addProduct",
+					"host": [
+						"{{baseurl}}"
+					],
+					"port": "7001",
+					"path": [
+						"addProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n          \"barcode\": \"834739926138\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}:7001/deleteProduct",
+					"host": [
+						"{{baseurl}}"
+					],
+					"port": "7001",
+					"path": [
+						"deleteProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n          \"name\": \"Amul Shakti milk\",\r\n          \"price\": \"30\",\r\n          \"quantity\": 30,\r\n          \"barcode\": \"878556899\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}:7001/updateProduct",
+					"host": [
+						"{{baseurl}}"
+					],
+					"port": "7001",
+					"path": [
+						"updateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Cart Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n          \"barcode\": \"68621789159\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}:7001/addCartProduct",
+					"host": [
+						"{{baseurl}}"
+					],
+					"port": "7001",
+					"path": [
+						"addCartProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"products\": [\r\n    {\r\n        \"name\": \"Redbull energy drink\",\r\n        \"price\": \"2\",\r\n        \"quantity\": 6,\r\n        \"barcode\": \"6969877855\"\r\n    },\r\n    {\r\n        \"name\": \"Onions\",\r\n        \"price\": \"1\",\r\n        \"quantity\": 2,\r\n        \"barcode\": \"6548464658\"\r\n    },\r\n    {\r\n        \"name\": \"Dettol Hand wash\",\r\n        \"price\": \"4\",\r\n        \"quantity\": 2,\r\n        \"barcode\": \"56654846688\"\r\n    }\r\n],\r\n    \"orderTotal\": 1400\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}:7001/addOrder",
+					"host": [
+						"{{baseurl}}"
+					],
+					"port": "7001",
+					"path": [
+						"addOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MonthlyRevenueData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}:7001/getMonthlyRevenueData",
+					"host": [
+						"{{baseurl}}"
+					],
+					"port": "7001",
+					"path": [
+						"getMonthlyRevenueData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET HourlyRevenueData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}:7001/getHourlyRevenueData",
+					"host": [
+						"{{baseurl}}"
+					],
+					"port": "7001",
+					"path": [
+						"getHourlyRevenueData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TopProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}:7001/getTopProducts",
+					"host": [
+						"{{baseurl}}"
+					],
+					"port": "7001",
+					"path": [
+						"getTopProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET RP Poduct Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}:7001/getReorderPoint",
+					"host": [
+						"{{baseurl}}"
+					],
+					"port": "7001",
+					"path": [
+						"getReorderPoint"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
